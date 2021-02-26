@@ -1,4 +1,11 @@
+# intelliJ
 .idea
+
+# environment files
+.env
 
 
 node_modules
+
+# postgres local
+/postgres/data
