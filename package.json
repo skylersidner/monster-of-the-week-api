@@ -5,6 +5,10 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
+    "db:migrate": "npx knex migrate:latest",
+    "db:rollback": "npx knex migrate:rollback",
+    "db:list-migrations": "npx knex migrate:list",
+    "db:seed": "npx knex seed:run",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -22,7 +26,8 @@
     "apollo-server-express": "^2.21.0",
     "express": "^4.17.1",
     "graphql": "^15.5.0",
-    "graphql-import-files": "^1.0.10"
-  },
-  "type": "module"
+    "graphql-import-files": "^1.0.10",
+    "knex": "^0.21.18",
+    "pg": "^8.5.1"
+  }
 }

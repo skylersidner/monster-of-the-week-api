@@ -1,5 +1,5 @@
-import {loadFiles} from "graphql-import-files";
+const { loadFiles } = require("graphql-import-files");
 
 const schema = loadFiles('**/schemas/**/*.{graphql,gql}')
 
-export default schema
+module.exports = schema

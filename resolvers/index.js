@@ -1,5 +1,5 @@
-import test from "./test.js"
+const test = require("./test.js");
 
-export default {
+module.exports = {
     ...test
 }

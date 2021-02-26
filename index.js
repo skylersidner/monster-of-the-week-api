@@ -1,8 +1,10 @@
-import express from 'express';
-import { ApolloServer } from 'apollo-server-express';
+const express = require('express');
+const { ApolloServer } = require('apollo-server-express');
 
-import schema from './schemas/index.js';
-import resolvers from './resolvers/index.js';
+const schema = require('./schemas/index.js');
+const resolvers = require('./resolvers/index.js');
+
+
 
 const app = express();
 
@@ -14,5 +16,5 @@ const server = new ApolloServer({
 server.applyMiddleware({ app, path: '/graphql' });
 
 app.listen({ port: 8000 }, () => {
-    console.log('Apollo Server on http://localhost:8000/graphql');
+    console.log('Apollo Server running on http://localhost:8000/graphql! 🚀');
 });
