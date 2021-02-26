@@ -1,0 +1,27 @@
+{
+  "name": "monster-of-the-week-api",
+  "version": "1.0.0",
+  "description": "An API for persisting data about Monster of the Week games.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/skylersidner/monster-of-the-week-api.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/skylersidner/monster-of-the-week-api/issues"
+  },
+  "homepage": "https://github.com/skylersidner/monster-of-the-week-api#readme",
+  "dependencies": {
+    "apollo-server": "^2.21.0",
+    "apollo-server-express": "^2.21.0",
+    "express": "^4.17.1",
+    "graphql": "^15.5.0"
+  },
+  "type": "module"
+}
