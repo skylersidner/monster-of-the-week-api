@@ -8,6 +8,7 @@ const { MonsterPowersApi } = require('./MonsterPowersApi');
 const { MonstersApi } = require('./MonstersApi');
 const { MonsterTypesApi } = require('./MonsterTypesApi');
 const { MysteriesApi } = require('./MysteriesApi');
+const { WeaponTagsApi } = require('./WeaponTagsApi');
 
 const { createConnection } = require('./connection')
 
@@ -26,6 +27,7 @@ function dataSources() {
     monstersApi: new MonstersApi(db),
     monsterTypesApi: new MonsterTypesApi(db),
     mysteriesApi: new MysteriesApi(db),
+    weaponTagsApi: new WeaponTagsApi(db),
   }
 }
 module.exports = {
@@ -37,5 +39,6 @@ module.exports = {
   MonstersApi,
   MonsterTypesApi,
   MysteriesApi,
+  WeaponTagsApi,
   dataSources,
 };

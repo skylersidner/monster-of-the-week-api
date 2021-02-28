@@ -1,0 +1,30 @@
+
+type WeaponTag {
+    id: ID!
+    name: String!
+    description: String
+    createdAt: String!
+    updatedAt: String!
+}
+
+input CreateWeaponTagInput {
+    name: String!
+    description: String
+}
+
+input UpdateWeaponTagInput {
+    id: ID!
+    name: String!
+    description: String
+}
+
+extend type Query {
+    weaponTags: [WeaponTag]
+    weaponTag(id: ID!): WeaponTag
+}
+
+extend type Mutation {
+    createWeaponTag(input: CreateWeaponTagInput!): WeaponTag
+    updateWeaponTag(input: UpdateWeaponTagInput!): WeaponTag
+    deleteWeaponTag(id: ID!): Boolean
+}
