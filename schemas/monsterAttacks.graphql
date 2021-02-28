@@ -1,0 +1,33 @@
+
+type MonsterAttack {
+    id: ID!
+    monsterId: ID!
+    name: String!
+    description: String
+    createdAt: String!
+    updatedAt: String!
+}
+
+input CreateMonsterAttackInput {
+    monsterId: ID!
+    name: String!
+    description: String
+}
+
+input UpdateMonsterAttackInput {
+    id: ID!
+    monsterId: ID
+    name: String
+    description: String
+}
+
+extend type Query {
+    monsterAttacks: [MonsterAttack]
+    monsterAttack(id: ID!): MonsterAttack
+}
+
+extend type Mutation {
+    createMonsterAttack(input: CreateMonsterAttackInput!): MonsterAttack
+    updateMonsterAttack(input: UpdateMonsterAttackInput!): MonsterAttack
+    deleteMonsterAttack(id: ID!): Boolean
+}

@@ -4,6 +4,7 @@ const { BystanderTypesApi } = require('./BystanderTypesApi');
 const { CountdownsApi } = require('./CountdownsApi');
 const { LocationTypesApi } = require('./LocationTypesApi');
 const { MinionTypesApi } = require('./MinionTypesApi');
+const { MonsterAttacksApi } = require('./MonsterAttacksApi');
 const { MonsterPowersApi } = require('./MonsterPowersApi');
 const { MonstersApi } = require('./MonstersApi');
 const { MonsterTypesApi } = require('./MonsterTypesApi');
@@ -23,6 +24,7 @@ function dataSources() {
     countdownsApi: new CountdownsApi(db),
     locationTypesApi: new LocationTypesApi(db),
     minionTypesApi: new MinionTypesApi(db),
+    monsterAttacksApi: new MonsterAttacksApi(db),
     monsterPowersApi: new MonsterPowersApi(db),
     monstersApi: new MonstersApi(db),
     monsterTypesApi: new MonsterTypesApi(db),
@@ -35,6 +37,7 @@ module.exports = {
   CountdownsApi,
   LocationTypesApi,
   MinionTypesApi,
+  MonsterAttacksApi,
   MonsterPowersApi,
   MonstersApi,
   MonsterTypesApi,

@@ -4,6 +4,7 @@ const bystanderTypes = require('./bystanderTypes');
 const countdowns = require('./countdowns');
 const locationTypes = require('./locationTypes');
 const minionTypes = require('./minionTypes');
+const monsterAttacks = require('./monsterAttacks');
 const monsterPowers = require('./monsterPowers');
 const monsters = require('./monsters');
 const monsterTypes = require('./monsterTypes');
@@ -16,6 +17,7 @@ module.exports = [
   countdowns,
   locationTypes,
   minionTypes,
+  monsterAttacks,
   monsterPowers,
   monsters,
   monsterTypes,
