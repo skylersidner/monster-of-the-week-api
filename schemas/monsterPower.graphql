@@ -1,0 +1,31 @@
+
+type MonsterPower {
+    id: ID!
+    monsterId: ID!
+    name: String!
+    description: String
+}
+
+input CreateMonsterPowerInput {
+    monsterId: ID!
+    name: String!
+    description: String
+}
+
+input UpdateMonsterPowerInput {
+    id: ID!
+    monsterId: ID!
+    name: String!
+    description: String
+}
+
+extend type Query {
+    monsterPowers: [MonsterPower]
+    monsterPower(id: ID!): MonsterPower
+}
+
+extend type Mutation {
+    createMonsterPower(input: CreateMonsterPowerInput!): MonsterPower
+    updateMonsterPower(input: UpdateMonsterPowerInput!): MonsterPower
+    deleteMonsterPower(id: ID!): Boolean
+}
