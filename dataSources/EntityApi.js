@@ -45,7 +45,7 @@ class EntityApi {
   async update({ entity }) {
     const { id } = entity
     if (!id) {
-      throw new Error(`ID is required when updating entity ${this.entityName}`);
+      throw new Error(`ID is required when updating ${this.entityName}`);
     }
 
     const now = nowTimestampUtcString();
@@ -58,7 +58,10 @@ class EntityApi {
     const query = this.db(this.entityName);
 
     try {
-      await query.where('id', id).update(snakeEntity);
+      const result = await query.where('id', id).update(snakeEntity);
+      if (!result) {
+        throw new Error(`Entity could not be updated because it doesn't exist.`)
+      }
       return this.byId({ id });
     } catch (error) {
       console.error(`Encountered an error while updating ${this.entityName} with ID ${id}`, error);
@@ -75,7 +78,7 @@ class EntityApi {
     try {
       const result = await query.where('id', id).del();
       if (!result) {
-        throw new Error(`Entity with ID ${id} could not be deleted because it does not exist.`)
+        throw new Error(`Entity could not be deleted because it does not exist.`)
       }
       return result;
     } catch (error) {

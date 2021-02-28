@@ -1,0 +1,45 @@
+
+type Countdown {
+    id: ID!
+    mysteryId: ID!
+    day: String!
+    shadows: String
+    sunset: String
+    dusk: String
+    nightfall: String
+    midnight: String
+    createdAt: String!
+    updatedAt: String!
+}
+
+input CreateCountdownInput {
+    mysteryId: ID!
+    day: String!
+    shadows: String
+    sunset: String
+    dusk: String
+    nightfall: String
+    midnight: String
+}
+
+input UpdateCountdownInput {
+    id: ID!
+    mysteryId: ID
+    day: String
+    shadows: String
+    sunset: String
+    dusk: String
+    nightfall: String
+    midnight: String
+}
+
+extend type Query {
+    countdowns: [Countdown]
+    countdown(id: ID!): Countdown
+}
+
+extend type Mutation {
+    createCountdown(input: CreateCountdownInput!): Countdown
+    updateCountdown(input: UpdateCountdownInput!): Countdown
+    deleteCountdown(id: ID!): Boolean
+}
