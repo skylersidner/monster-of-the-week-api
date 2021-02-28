@@ -1,27 +1,27 @@
 const bystanderTypes = {
   Query: {
     async bystanderTypes(source, args, { dataSources }) {
-      const { bystanderTypeApi } = dataSources;
-      const result = await bystanderTypeApi.all();
+      const { bystanderTypesApi } = dataSources;
+      const result = await bystanderTypesApi.all();
       return result.data;
     },
     async bystanderType(source, { id }, { dataSources }) {
-      const { bystanderTypeApi } = dataSources;
-      return bystanderTypeApi.byId({ id });
+      const { bystanderTypesApi } = dataSources;
+      return bystanderTypesApi.byId({ id });
     }
   },
   Mutation: {
     async createBystanderType(source, { input }, { dataSources }) {
-      const { bystanderTypeApi } = dataSources;
-      return bystanderTypeApi.create({ entity: input });
+      const { bystanderTypesApi } = dataSources;
+      return bystanderTypesApi.create({ entity: input });
     },
     async updateBystanderType(source, { input }, { dataSources }) {
-      const { bystanderTypeApi } = dataSources;
-      return bystanderTypeApi.update({ entity: input });
+      const { bystanderTypesApi } = dataSources;
+      return bystanderTypesApi.update({ entity: input });
     },
     async deleteBystanderType(source, { id }, { dataSources }) {
-      const { bystanderTypeApi } = dataSources;
-      return bystanderTypeApi.delete({ id });
+      const { bystanderTypesApi } = dataSources;
+      return bystanderTypesApi.delete({ id });
     }
   }
 };

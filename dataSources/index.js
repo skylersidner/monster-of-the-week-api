@@ -1,11 +1,11 @@
 const { SQLDataSource } = require('datasource-sql');
 
-const { BystanderTypeApi } = require('./BystanderTypeApi');
+const { BystanderTypesApi } = require('./BystanderTypesApi');
 const { CountdownsApi } = require('./CountdownsApi');
-const { LocationTypeApi } = require('./LocationTypeApi');
-const { MonsterPowerApi } = require('./MonsterPowerApi');
-const { MonsterTypeApi } = require('./MonsterTypeApi');
-const { MysteryApi } = require('./MysteryApi');
+const { LocationTypesApi } = require('./LocationTypesApi');
+const { MonsterPowersApi } = require('./MonsterPowersApi');
+const { MonsterTypesApi } = require('./MonsterTypesApi');
+const { MysteriesApi } = require('./MysteriesApi');
 
 const { createConnection } = require('./connection')
 
@@ -16,20 +16,20 @@ const db = new DataSource(databaseConnection).db;
 
 function dataSources() {
   return {
-    bystanderTypeApi: new BystanderTypeApi(db),
+    bystanderTypesApi: new BystanderTypesApi(db),
     countdownsApi: new CountdownsApi(db),
-    locationTypeApi: new LocationTypeApi(db),
-    monsterPowerApi: new MonsterPowerApi(db),
-    monsterTypeApi: new MonsterTypeApi(db),
-    mysteryApi: new MysteryApi(db),
+    locationTypesApi: new LocationTypesApi(db),
+    monsterPowersApi: new MonsterPowersApi(db),
+    monsterTypesApi: new MonsterTypesApi(db),
+    mysteriesApi: new MysteriesApi(db),
   }
 }
 module.exports = {
-  BystanderTypeApi,
+  BystanderTypesApi,
   CountdownsApi,
-  LocationTypeApi,
-  MonsterPowerApi,
-  MonsterTypeApi,
-  MysteryApi,
+  LocationTypesApi,
+  MonsterPowersApi,
+  MonsterTypesApi,
+  MysteriesApi,
   dataSources,
 };

@@ -1,27 +1,27 @@
 const monsterPowers = {
   Query: {
     async monsterPowers(source, args, { dataSources }) {
-      const { monsterPowerApi } = dataSources;
-      const result = await monsterPowerApi.all();
+      const { monsterPowersApi } = dataSources;
+      const result = await monsterPowersApi.all();
       return result.data;
     },
     async monsterPower(source, { id }, { dataSources }) {
-      const { monsterPowerApi } = dataSources;
-      return monsterPowerApi.byId({ id });
+      const { monsterPowersApi } = dataSources;
+      return monsterPowersApi.byId({ id });
     }
   },
   Mutation: {
     async createMonsterPower(source, { input }, { dataSources }) {
-      const { monsterPowerApi } = dataSources;
-      return monsterPowerApi.create({ entity: input });
+      const { monsterPowersApi } = dataSources;
+      return monsterPowersApi.create({ entity: input });
     },
     async updateMonsterPower(source, { input }, { dataSources }) {
-      const { monsterPowerApi } = dataSources;
-      return monsterPowerApi.update({ entity: input });
+      const { monsterPowersApi } = dataSources;
+      return monsterPowersApi.update({ entity: input });
     },
     async deleteMonsterPower(source, { id }, { dataSources }) {
-      const { monsterPowerApi } = dataSources;
-      return monsterPowerApi.delete({ id });
+      const { monsterPowersApi } = dataSources;
+      return monsterPowersApi.delete({ id });
     }
   }
 };

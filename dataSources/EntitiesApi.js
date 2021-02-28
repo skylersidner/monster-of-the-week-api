@@ -5,7 +5,7 @@ const {
 } = require('../helpers');
 
 
-class EntityApi {
+class EntitiesApi {
   constructor(entityName, db) {
     this.db = db;
     this.entityName = entityName;
@@ -102,4 +102,4 @@ class EntityApi {
   }
 }
 
-module.exports = { EntityApi };
+module.exports = { EntitiesApi };

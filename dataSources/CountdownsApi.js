@@ -1,6 +1,6 @@
-const { EntityApi } = require('./EntityApi');
+const { EntitiesApi } = require('./EntitiesApi');
 
-class CountdownsApi extends EntityApi {
+class CountdownsApi extends EntitiesApi {
   constructor(db) {
     super('countdowns', db);
   }

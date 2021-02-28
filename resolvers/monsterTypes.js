@@ -1,27 +1,27 @@
 const monsterTypes = {
   Query: {
     async monsterTypes(source, args, { dataSources }) {
-      const { monsterTypeApi } = dataSources;
-      const result = await monsterTypeApi.all();
+      const { monsterTypesApi } = dataSources;
+      const result = await monsterTypesApi.all();
       return result.data;
     },
     async monsterType(source, { id }, { dataSources }) {
-      const { monsterTypeApi } = dataSources;
-      return monsterTypeApi.byId({ id });
+      const { monsterTypesApi } = dataSources;
+      return monsterTypesApi.byId({ id });
     }
   },
   Mutation: {
     async createMonsterType(source, { input }, { dataSources }) {
-      const { monsterTypeApi } = dataSources;
-      return monsterTypeApi.create({ entity: input });
+      const { monsterTypesApi } = dataSources;
+      return monsterTypesApi.create({ entity: input });
     },
     async updateMonsterType(source, { input }, { dataSources }) {
-      const { monsterTypeApi } = dataSources;
-      return monsterTypeApi.update({ entity: input });
+      const { monsterTypesApi } = dataSources;
+      return monsterTypesApi.update({ entity: input });
     },
     async deleteMonsterType(source, { id }, { dataSources }) {
-      const { monsterTypeApi } = dataSources;
-      return monsterTypeApi.delete({ id });
+      const { monsterTypesApi } = dataSources;
+      return monsterTypesApi.delete({ id });
     }
   }
 };

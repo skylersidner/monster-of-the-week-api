@@ -1,27 +1,27 @@
 const mysteries = {
   Query: {
     async mysteries(source, args, { dataSources }) {
-      const { mysteryApi } = dataSources;
-      const result = await mysteryApi.all();
+      const { mysteriesApi } = dataSources;
+      const result = await mysteriesApi.all();
       return result.data;
     },
     async mystery(source, { id }, { dataSources }) {
-      const { mysteryApi } = dataSources;
-      return mysteryApi.byId({ id });
+      const { mysteriesApi } = dataSources;
+      return mysteriesApi.byId({ id });
     }
   },
   Mutation: {
     async createMystery(source, { input }, { dataSources }) {
-      const { mysteryApi } = dataSources;
-      return mysteryApi.create({ entity: input });
+      const { mysteriesApi } = dataSources;
+      return mysteriesApi.create({ entity: input });
     },
     async updateMystery(source, { input }, { dataSources }) {
-      const { mysteryApi } = dataSources;
-      return mysteryApi.update({ entity: input });
+      const { mysteriesApi } = dataSources;
+      return mysteriesApi.update({ entity: input });
     },
     async deleteMystery(source, { id }, { dataSources }) {
-      const { mysteryApi } = dataSources;
-      return mysteryApi.delete({ id });
+      const { mysteriesApi } = dataSources;
+      return mysteriesApi.delete({ id });
     }
   }
 };
