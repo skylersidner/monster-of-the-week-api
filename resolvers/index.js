@@ -1,5 +1,7 @@
-const test = require("./test.js");
+const common = require('./common');
+const monsterTypes = require('./monsterTypes')
 
-module.exports = {
-    ...test
-}
+module.exports = [
+    common,
+    monsterTypes,
+]

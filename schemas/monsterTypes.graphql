@@ -1,0 +1,28 @@
+
+type MonsterType {
+    id: ID!
+    name: String!
+    motivation: String
+}
+
+input CreateMonsterTypeInput {
+    name: String!
+    motivation: String
+}
+
+input UpdateMonsterTypeInput {
+    id: ID!
+    name: String!
+    motivation: String
+}
+
+extend type Query {
+    monsterTypes: [MonsterType]
+    monsterType(id: ID!): MonsterType
+}
+
+extend type Mutation {
+    createMonsterType(input: CreateMonsterTypeInput!): MonsterType
+    updateMonsterType(input: UpdateMonsterTypeInput!): MonsterType
+    deleteMonsterType(id: ID!): Boolean
+}
