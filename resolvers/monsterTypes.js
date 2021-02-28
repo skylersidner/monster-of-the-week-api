@@ -1,6 +1,5 @@
 const monsterTypes = {
   Query: {
-    // TODO: figure out the async and data issue
     async monsterTypes(source, args, { dataSources }) {
       const { monsterTypeApi } = dataSources;
       const result = await monsterTypeApi.all();

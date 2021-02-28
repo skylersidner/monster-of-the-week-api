@@ -1,7 +1,12 @@
 const common = require('./common');
-const monsterTypes = require('./monsterTypes')
+
+const bystanderTypes = require('./bystanderTypes');
+const locationTypes = require('./locationTypes');
+const monsterTypes = require('./monsterTypes');
 
 module.exports = [
-    common,
-    monsterTypes,
+  common,
+  bystanderTypes,
+  locationTypes,
+  monsterTypes,
 ]

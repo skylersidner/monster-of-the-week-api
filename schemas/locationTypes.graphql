@@ -1,0 +1,28 @@
+
+type LocationType {
+    id: ID!
+    name: String!
+    motivation: String
+}
+
+input CreateLocationTypeInput {
+    name: String!
+    motivation: String
+}
+
+input UpdateLocationTypeInput {
+    id: ID!
+    name: String!
+    motivation: String
+}
+
+extend type Query {
+    locationTypes: [LocationType]
+    locationType(id: ID!): LocationType
+}
+
+extend type Mutation {
+    createLocationType(input: CreateLocationTypeInput!): LocationType
+    updateLocationType(input: UpdateLocationTypeInput!): LocationType
+    deleteLocationType(id: ID!): Boolean
+}

@@ -1,0 +1,28 @@
+
+type BystanderType {
+    id: ID!
+    name: String!
+    motivation: String
+}
+
+input CreateBystanderTypeInput {
+    name: String!
+    motivation: String
+}
+
+input UpdateBystanderTypeInput {
+    id: ID!
+    name: String!
+    motivation: String
+}
+
+extend type Query {
+    bystanderTypes: [BystanderType]
+    bystanderType(id: ID!): BystanderType
+}
+
+extend type Mutation {
+    createBystanderType(input: CreateBystanderTypeInput!): BystanderType
+    updateBystanderType(input: UpdateBystanderTypeInput!): BystanderType
+    deleteBystanderType(id: ID!): Boolean
+}

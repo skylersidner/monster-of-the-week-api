@@ -77,6 +77,7 @@ class EntityApi {
       if (!result) {
         throw new Error(`Entity with ID ${id} could not be deleted because it does not exist.`)
       }
+      return result;
     } catch (error) {
       console.error(`Encountered an error while deleting ${this.entityName} with ID ${id}`, error);
       throw new Error(error); // TODO: make specific errors for this
