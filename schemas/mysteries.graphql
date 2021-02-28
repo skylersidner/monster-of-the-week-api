@@ -1,0 +1,39 @@
+
+type Mystery {
+    id: ID!
+    name: String!
+    concept: String
+    hook: String
+    overview: String
+    notes: String
+    createdAt: String!
+    updatedAt: String!
+}
+
+input CreateMysteryInput {
+    name: String!
+    concept: String
+    hook: String
+    overview: String
+    notes: String
+}
+
+input UpdateMysteryInput {
+    id: ID!
+    name: String!
+    concept: String
+    hook: String
+    overview: String
+    notes: String
+}
+
+extend type Query {
+    mysteries: [Mystery]
+    mystery(id: ID!): Mystery
+}
+
+extend type Mutation {
+    createMystery(input: CreateMysteryInput!): Mystery
+    updateMystery(input: UpdateMysteryInput!): Mystery
+    deleteMystery(id: ID!): Boolean
+}

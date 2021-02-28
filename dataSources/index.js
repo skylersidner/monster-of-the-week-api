@@ -4,6 +4,7 @@ const { BystanderTypeApi } = require('./BystanderTypeApi');
 const { LocationTypeApi } = require('./LocationTypeApi');
 const { MonsterPowerApi } = require('./MonsterPowerApi');
 const { MonsterTypeApi } = require('./MonsterTypeApi');
+const { MysteryApi } = require('./MysteryApi');
 
 const { createConnection } = require('./connection')
 
@@ -18,6 +19,7 @@ function dataSources() {
     locationTypeApi: new LocationTypeApi(db),
     monsterPowerApi: new MonsterPowerApi(db),
     monsterTypeApi: new MonsterTypeApi(db),
+    mysteryApi: new MysteryApi(db),
   }
 }
 module.exports = {
@@ -25,5 +27,6 @@ module.exports = {
   LocationTypeApi,
   MonsterPowerApi,
   MonsterTypeApi,
+  MysteryApi,
   dataSources,
 };

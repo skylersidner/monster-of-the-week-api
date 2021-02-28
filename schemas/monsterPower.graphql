@@ -10,6 +10,8 @@ input CreateMonsterPowerInput {
     monsterId: ID!
     name: String!
     description: String
+    createdAt: String!
+    updatedAt: String!
 }
 
 input UpdateMonsterPowerInput {

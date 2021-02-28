@@ -3,6 +3,8 @@ type BystanderType {
     id: ID!
     name: String!
     motivation: String
+    createdAt: String!
+    updatedAt: String!
 }
 
 input CreateBystanderTypeInput {

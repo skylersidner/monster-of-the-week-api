@@ -3,6 +3,8 @@ type LocationType {
     id: ID!
     name: String!
     motivation: String
+    createdAt: String!
+    updatedAt: String!
 }
 
 input CreateLocationTypeInput {
