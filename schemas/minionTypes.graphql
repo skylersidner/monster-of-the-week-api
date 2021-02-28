@@ -1,0 +1,30 @@
+
+type MinionType {
+    id: ID!
+    name: String!
+    motivation: String
+    createdAt: String!
+    updatedAt: String!
+}
+
+input CreateMinionTypeInput {
+    name: String!
+    motivation: String
+}
+
+input UpdateMinionTypeInput {
+    id: ID!
+    name: String!
+    motivation: String
+}
+
+extend type Query {
+    minionTypes: [MinionType]
+    minionType(id: ID!): MinionType
+}
+
+extend type Mutation {
+    createMinionType(input: CreateMinionTypeInput!): MinionType
+    updateMinionType(input: UpdateMinionTypeInput!): MinionType
+    deleteMinionType(id: ID!): Boolean
+}
