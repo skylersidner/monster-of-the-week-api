@@ -37,7 +37,7 @@ exports.up = function (knex) {
   .createTable('monsters', function (table) {
     table.uuid('id').primary();
     table.uuid('mystery_id').notNullable();
-    table.uuid('monster_type_id').notNullable();
+    table.uuid('monster_type_id');
     table.uuid('minion_type_id');
     table.string('name').notNullable();
     table.string('description');

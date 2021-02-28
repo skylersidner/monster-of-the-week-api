@@ -1,0 +1,45 @@
+
+type Monster {
+    id: ID!
+    mysteryId: ID!
+    monsterTypeId: ID
+    minionTypeId: ID
+    name: String!
+    description: String
+    harmCapacity: Int
+    createdAt: String!
+    updatedAt: String!
+}
+
+input CreateMonsterInput {
+    mysteryId: ID!
+    "Required unless a minionTypeId is passed"
+    monsterTypeId: ID
+    "Required unless a monsterTypeId is passed"
+    minionTypeId: ID
+    name: String!
+    description: String
+    "Defaults to 7 if not passed"
+    harmCapacity: Int
+}
+
+input UpdateMonsterInput {
+    id: ID!
+    mysteryId: ID!
+    monsterTypeId: ID
+    minionTypeId: ID
+    name: String!
+    description: String
+    harmCapacity: Int
+}
+
+extend type Query {
+    monsters: [Monster]
+    monster(id: ID!): Monster
+}
+
+extend type Mutation {
+    createMonster(input: CreateMonsterInput!): Monster
+    updateMonster(input: UpdateMonsterInput!): Monster
+    deleteMonster(id: ID!): Boolean
+}
