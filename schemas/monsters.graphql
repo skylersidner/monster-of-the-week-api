@@ -25,7 +25,7 @@ input CreateMonsterInput {
 
 input UpdateMonsterInput {
     id: ID!
-    mysteryId: ID!
+    mysteryId: ID
     monsterTypeId: ID
     minionTypeId: ID
     name: String!

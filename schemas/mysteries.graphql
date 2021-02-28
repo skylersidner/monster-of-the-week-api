@@ -20,7 +20,7 @@ input CreateMysteryInput {
 
 input UpdateMysteryInput {
     id: ID!
-    name: String!
+    name: String
     concept: String
     hook: String
     overview: String

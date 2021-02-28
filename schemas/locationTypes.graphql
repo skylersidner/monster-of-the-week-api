@@ -14,7 +14,7 @@ input CreateLocationTypeInput {
 
 input UpdateLocationTypeInput {
     id: ID!
-    name: String!
+    name: String
     motivation: String
 }
 

@@ -14,7 +14,7 @@ input CreateMinionTypeInput {
 
 input UpdateMinionTypeInput {
     id: ID!
-    name: String!
+    name: String
     motivation: String
 }
 

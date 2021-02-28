@@ -16,7 +16,7 @@ input CreateMonsterPowerInput {
 
 input UpdateMonsterPowerInput {
     id: ID!
-    monsterId: ID!
+    monsterId: ID
     name: String!
     description: String
 }

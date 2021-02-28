@@ -14,7 +14,7 @@ input CreateWeaponTagInput {
 
 input UpdateWeaponTagInput {
     id: ID!
-    name: String!
+    name: String
     description: String
 }
 

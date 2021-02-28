@@ -14,7 +14,7 @@ input CreateBystanderTypeInput {
 
 input UpdateBystanderTypeInput {
     id: ID!
-    name: String!
+    name: String
     motivation: String
 }
 

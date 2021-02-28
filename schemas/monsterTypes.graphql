@@ -14,7 +14,7 @@ input CreateMonsterTypeInput {
 
 input UpdateMonsterTypeInput {
     id: ID!
-    name: String!
+    name: String
     motivation: String
 }
 
