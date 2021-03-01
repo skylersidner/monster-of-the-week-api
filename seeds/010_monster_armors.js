@@ -5,6 +5,7 @@ exports.seed = function (knex) {
       monster_id: "1356c302-23a4-4fc7-b799-8fd721004b0f", // Bubbles
       name: "Wind resistance",
       description: "Blows gently in the wind.",
+      harm_soak: 2,
       is_magical: true
     },
     {
@@ -12,6 +13,7 @@ exports.seed = function (knex) {
       monster_id: "803ba7fb-ab49-4a2a-a6d7-7b6a60b55e87", // Fizz
       name: "Soda can",
       description: "Protects against rusting.",
+      // harm_soak: 1,
       is_magical: false
     },
   ]);

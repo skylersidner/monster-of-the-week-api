@@ -1,0 +1,39 @@
+
+type MonsterArmor {
+    id: ID!
+    monsterId: ID!
+    name: String!
+    description: String
+    harmSoak: Int
+    isMagical: String
+    createdAt: String!
+    updatedAt: String!
+}
+
+input CreateMonsterArmorInput {
+    monsterId: ID!
+    name: String!
+    description: String
+    harmSoak: Int
+    isMagical: String
+}
+
+input UpdateMonsterArmorInput {
+    id: ID!
+    monsterId: ID
+    name: String
+    description: String
+    harmSoak: Int
+    isMagical: String
+}
+
+extend type Query {
+    monsterArmors: [MonsterArmor]
+    monsterArmor(id: ID!): MonsterArmor
+}
+
+extend type Mutation {
+    createMonsterArmor(input: CreateMonsterArmorInput!): MonsterArmor
+    updateMonsterArmor(input: UpdateMonsterArmorInput!): MonsterArmor
+    deleteMonsterArmor(id: ID!): Boolean
+}
