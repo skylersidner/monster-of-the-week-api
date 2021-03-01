@@ -1,5 +1,5 @@
 exports.seed = function (knex) {
-  return knex("weapon_tags_monster_attacks").insert([
+  return knex("monster_attacks_weapon_tags").insert([
     {
       monster_attack_id: "4aa20b01-5fc9-4eab-81b6-0202f90fc2e8", // pop
       weapon_tag_id: "88c36582-173f-4d4e-bf16-3bcd026bb385", // area

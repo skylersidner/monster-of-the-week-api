@@ -70,7 +70,7 @@ exports.up = function (knex) {
     table.foreign('monster_id').references('monsters.id');
     table.timestamps(true, true);
   })
-  .createTable('weapon_tags_monster_attacks', function (table) {
+  .createTable('monster_attacks_weapon_tags', function (table) {
     table.uuid('weapon_tag_id').notNullable();
     table.uuid('monster_attack_id').notNullable();
     table.foreign('weapon_tag_id').references('weapon_tags.id');
