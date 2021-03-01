@@ -9,6 +9,7 @@ const monsterAttacks = require('./monsterAttacks');
 const monsterPowers = require('./monsterPowers');
 const monsters = require('./monsters');
 const monsterTypes = require('./monsterTypes');
+const monsterWeaknesses = require('./monsterWeaknesses');
 const mysteries = require('./mysteries');
 const weaponTags = require('./weaponTags');
 
@@ -23,6 +24,7 @@ module.exports = [
   monsterPowers,
   monsters,
   monsterTypes,
+  monsterWeaknesses,
   mysteries,
   weaponTags,
 ]

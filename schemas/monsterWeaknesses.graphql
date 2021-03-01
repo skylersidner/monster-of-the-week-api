@@ -1,0 +1,33 @@
+
+type MonsterWeakness {
+    id: ID!
+    monsterId: ID!
+    name: String!
+    description: String
+    createdAt: String!
+    updatedAt: String!
+}
+
+input CreateMonsterWeaknessInput {
+    monsterId: ID!
+    name: String!
+    description: String
+}
+
+input UpdateMonsterWeaknessInput {
+    id: ID!
+    monsterId: ID
+    name: String
+    description: String
+}
+
+extend type Query {
+    monsterWeaknesses: [MonsterWeakness]
+    monsterWeakness(id: ID!): MonsterWeakness
+}
+
+extend type Mutation {
+    createMonsterWeakness(input: CreateMonsterWeaknessInput!): MonsterWeakness
+    updateMonsterWeakness(input: UpdateMonsterWeaknessInput!): MonsterWeakness
+    deleteMonsterWeakness(id: ID!): Boolean
+}

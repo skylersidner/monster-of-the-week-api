@@ -10,6 +10,7 @@ const { MonsterAttacksWeaponTagsApi } = require('./MonsterAttacksWeaponTagsApi')
 const { MonsterPowersApi } = require('./MonsterPowersApi');
 const { MonstersApi } = require('./MonstersApi');
 const { MonsterTypesApi } = require('./MonsterTypesApi');
+const { MonsterWeaknessesApi } = require('./MonsterWeaknessesApi');
 const { MysteriesApi } = require('./MysteriesApi');
 const { WeaponTagsApi } = require('./WeaponTagsApi');
 
@@ -32,6 +33,7 @@ function dataSources() {
     monsterPowersApi: new MonsterPowersApi(db),
     monstersApi: new MonstersApi(db),
     monsterTypesApi: new MonsterTypesApi(db),
+    monsterWeaknessesApi: new MonsterWeaknessesApi(db),
     mysteriesApi: new MysteriesApi(db),
     weaponTagsApi: new WeaponTagsApi(db),
   }
@@ -47,6 +49,7 @@ module.exports = {
   MonsterPowersApi,
   MonstersApi,
   MonsterTypesApi,
+  MonsterWeaknessesApi,
   MysteriesApi,
   WeaponTagsApi,
   dataSources,
