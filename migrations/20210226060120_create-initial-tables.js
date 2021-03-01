@@ -66,7 +66,7 @@ exports.up = function (knex) {
     table.uuid('monster_id').notNullable();
     table.string('name').notNullable();
     table.string('description');
-    table.integer('harm');
+    table.integer('harm').defaultTo(0);
     table.foreign('monster_id').references('monsters.id');
     table.timestamps(true, true);
   })

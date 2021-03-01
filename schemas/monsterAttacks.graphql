@@ -4,6 +4,7 @@ type MonsterAttack {
     monsterId: ID!
     name: String!
     description: String
+    harm: Int
     createdAt: String!
     updatedAt: String!
 }
@@ -12,6 +13,7 @@ input CreateMonsterAttackInput {
     monsterId: ID!
     name: String!
     description: String
+    harm: Int
 }
 
 input UpdateMonsterAttackInput {
@@ -19,6 +21,7 @@ input UpdateMonsterAttackInput {
     monsterId: ID
     name: String
     description: String
+    harm: Int
 }
 
 extend type Query {
