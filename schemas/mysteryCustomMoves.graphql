@@ -1,0 +1,33 @@
+
+type MysteryCustomMove {
+    id: ID!
+    mysteryId: ID!
+    name: String!
+    description: String
+    createdAt: String!
+    updatedAt: String!
+}
+
+input CreateMysteryCustomMoveInput {
+    mysteryId: ID!
+    name: String!
+    description: String
+}
+
+input UpdateMysteryCustomMoveInput {
+    id: ID!
+    mysteryId: ID!
+    name: String!
+    description: String
+}
+
+extend type Query {
+    mysteryCustomMoves: [MysteryCustomMove]
+    mysteryCustomMove(id: ID!): MysteryCustomMove
+}
+
+extend type Mutation {
+    createMysteryCustomMove(input: CreateMysteryCustomMoveInput!): MysteryCustomMove
+    updateMysteryCustomMove(input: UpdateMysteryCustomMoveInput!): MysteryCustomMove
+    deleteMysteryCustomMove(id: ID!): Boolean
+}
