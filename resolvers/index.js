@@ -1,5 +1,6 @@
 const common = require('./common');
 
+const bystanders = require('./bystanders');
 const bystanderTypes = require('./bystanderTypes');
 const countdowns = require('./countdowns');
 const locations = require('./locations');
@@ -16,6 +17,7 @@ const weaponTags = require('./weaponTags');
 
 module.exports = [
   common,
+  bystanders,
   bystanderTypes,
   countdowns,
   locations,
