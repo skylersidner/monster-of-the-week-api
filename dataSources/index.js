@@ -2,6 +2,7 @@ const { SQLDataSource } = require('datasource-sql');
 
 const { BystanderTypesApi } = require('./BystanderTypesApi');
 const { CountdownsApi } = require('./CountdownsApi');
+const { LocationsApi } = require('./LocationsApi');
 const { LocationTypesApi } = require('./LocationTypesApi');
 const { MinionTypesApi } = require('./MinionTypesApi');
 const { MonsterArmorsApi } = require('./MonsterArmorsApi');
@@ -25,6 +26,7 @@ function dataSources() {
   return {
     bystanderTypesApi: new BystanderTypesApi(db),
     countdownsApi: new CountdownsApi(db),
+    locationsApi: new LocationsApi(db),
     locationTypesApi: new LocationTypesApi(db),
     minionTypesApi: new MinionTypesApi(db),
     monsterArmorsApi: new MonsterArmorsApi(db),
@@ -41,6 +43,7 @@ function dataSources() {
 module.exports = {
   BystanderTypesApi,
   CountdownsApi,
+  LocationsApi,
   LocationTypesApi,
   MinionTypesApi,
   MonsterArmorsApi,
