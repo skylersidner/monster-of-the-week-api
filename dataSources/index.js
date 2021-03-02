@@ -9,6 +9,7 @@ const { MinionTypesApi } = require('./MinionTypesApi');
 const { MonsterArmorsApi } = require('./MonsterArmorsApi');
 const { MonsterAttacksApi } = require('./MonsterAttacksApi');
 const { MonsterAttacksWeaponTagsApi } = require('./MonsterAttacksWeaponTagsApi');
+const { MonsterCustomMovesApi } = require('./MonsterCustomMovesApi');
 const { MonsterPowersApi } = require('./MonsterPowersApi');
 const { MonstersApi } = require('./MonstersApi');
 const { MonsterTypesApi } = require('./MonsterTypesApi');
@@ -35,6 +36,7 @@ function dataSources() {
     monsterArmorsApi: new MonsterArmorsApi(db),
     monsterAttacksApi: new MonsterAttacksApi(db),
     monsterAttacksWeaponTagsApi: new MonsterAttacksWeaponTagsApi(db),
+    monsterCustomMovesApi: new MonsterCustomMovesApi(db),
     monsterPowersApi: new MonsterPowersApi(db),
     monstersApi: new MonstersApi(db),
     monsterTypesApi: new MonsterTypesApi(db),
@@ -54,6 +56,7 @@ module.exports = {
   MonsterArmorsApi,
   MonsterAttacksApi,
   MonsterAttacksWeaponTagsApi,
+  MonsterCustomMovesApi,
   MonsterPowersApi,
   MonstersApi,
   MonsterTypesApi,

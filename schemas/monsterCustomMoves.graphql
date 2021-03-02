@@ -1,0 +1,33 @@
+
+type MonsterCustomMove {
+    id: ID!
+    monsterId: ID!
+    name: String!
+    description: String
+    createdAt: String!
+    updatedAt: String!
+}
+
+input CreateMonsterCustomMoveInput {
+    monsterId: ID!
+    name: String!
+    description: String
+}
+
+input UpdateMonsterCustomMoveInput {
+    id: ID!
+    monsterId: ID!
+    name: String!
+    description: String
+}
+
+extend type Query {
+    monsterCustomMoves: [MonsterCustomMove]
+    monsterCustomMove(id: ID!): MonsterCustomMove
+}
+
+extend type Mutation {
+    createMonsterCustomMove(input: CreateMonsterCustomMoveInput!): MonsterCustomMove
+    updateMonsterCustomMove(input: UpdateMonsterCustomMoveInput!): MonsterCustomMove
+    deleteMonsterCustomMove(id: ID!): Boolean
+}

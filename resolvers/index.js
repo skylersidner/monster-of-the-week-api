@@ -8,6 +8,7 @@ const locationTypes = require('./locationTypes');
 const minionTypes = require('./minionTypes');
 const monsterArmors = require('./monsterArmors');
 const monsterAttacks = require('./monsterAttacks');
+const monsterCustomMoves = require('./monsterCustomMoves');
 const monsterPowers = require('./monsterPowers');
 const monsters = require('./monsters');
 const monsterTypes = require('./monsterTypes');
@@ -26,6 +27,7 @@ module.exports = [
   minionTypes,
   monsterArmors,
   monsterAttacks,
+  monsterCustomMoves,
   monsterPowers,
   monsters,
   monsterTypes,
